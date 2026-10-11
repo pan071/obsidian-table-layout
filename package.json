@@ -1,0 +1,21 @@
+{
+  "name": "obsidian-table-layout",
+  "version": "1.0.0",
+  "description": "Obsidian 表格布局：拖动调整列宽、双击自适应、铺满页面、行/列/单元格对齐，不改动笔记原文",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+    "deploy": "npm run build && node scripts/install.mjs"
+  },
+  "author": "启年",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "esbuild": "0.28.2",
+    "obsidian": "1.14.4",
+    "tslib": "^2.8.1",
+    "typescript": "~5.8.3"
+  }
+}

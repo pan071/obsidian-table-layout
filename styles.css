@@ -1,0 +1,43 @@
+/*
+ * 表格布局插件的全局样式：默认铺满、调整列宽光标与测量辅助
+ * 单个表格的列宽与对齐由插件动态写入 <style id="table-layout-dynamic">
+ *
+ * @author 启年
+ * @createTime 2026-10-11 15:14
+ */
+
+/* region 默认铺满：未设置列宽的表格撑满页面 */
+body.tl-fill-default .markdown-preview-view table:not([data-tl-mode]) {
+	width: 100%;
+}
+
+body.tl-fill-default .markdown-source-view .cm-table-widget > .table-wrapper:not([data-tl-mode]) {
+	width: 100%;
+}
+
+body.tl-fill-default .markdown-source-view .cm-table-widget > .table-wrapper:not([data-tl-mode]) > table {
+	width: 100%;
+}
+/* endregion */
+
+/* region 调整列宽时的光标 */
+body.tl-col-resize-hover,
+body.tl-col-resize-hover * {
+	cursor: col-resize !important;
+}
+
+body.tl-resizing,
+body.tl-resizing * {
+	cursor: col-resize !important;
+	user-select: none !important;
+}
+/* endregion */
+
+/* region 测量内容自然宽度时临时禁止换行 */
+table.tl-measuring th,
+table.tl-measuring td,
+table.tl-measuring th *,
+table.tl-measuring td * {
+	white-space: nowrap !important;
+}
+/* endregion */

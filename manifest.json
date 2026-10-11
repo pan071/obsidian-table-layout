@@ -1,0 +1,9 @@
+{
+  "id": "table-layout",
+  "name": "Table Layout",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "拖动调整表格列宽、双击列边框按内容自适应、表格铺满页面，支持整表/行/列/单元格的水平与垂直对齐，样式不写入笔记原文。",
+  "author": "启年",
+  "isDesktopOnly": true
+}
